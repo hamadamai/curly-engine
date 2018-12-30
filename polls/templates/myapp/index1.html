@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta charset="UTF-8">
+    <title>質問１</title>
+</head>
+<form action="{% url 'polls2' %}" method="POST">　{% csrf_token %}
+
+    <body><br>
+    以下の画像を「かっこいい・可愛い」に分類してください。<br>
+
+    {% load static%}
+    <p>{{ question_0 }}<br>
+        <img src="{% static "posts/010.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example0" value="1"　checked>{{ choice1_0 }}
+        <input type="radio" name="example0" value="2" >{{ choice2_0 }}<br><br>
+    </p>
+
+    <p>{{ question_1 }}<br>
+        <img src="{% static "posts/011.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example1" value="1"　checked>{{ choice1_1 }}
+        <input type="radio" name="example1" value="2" >{{ choice2_1}}<br><br>
+    </p>
+
+    <p>{{ question_2 }}<br>
+        <img src="{% static "posts/012.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example2" value="1"　checked>{{ choice1_2 }}
+        <input type="radio" name="example2" value="2" >{{ choice2_2}}<br><br>
+    </p>
+
+    <p>{{ question_3 }}<br>
+        <img src="{% static "posts/013.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example3" value="1"　checked>{{ choice1_3 }}
+        <input type="radio" name="example3" value="2" >{{ choice2_3}}<br><br>
+    </p>
+
+    <p>{{ question_4 }}<br>
+        <img src="{% static "posts/014.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example4" value="1"　checked>{{ choice1_4 }}
+        <input type="radio" name="example4" value="2" >{{ choice2_4}}<br><br>
+    </p>
+
+    <p>{{ question_5 }}<br>
+        <img src="{% static "posts/015.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example5" value="1"　checked>{{ choice1_5 }}
+        <input type="radio" name="example5" value="2" >{{ choice2_5}}<br><br>
+    </p>
+
+    <p>{{ question_6 }}<br>
+        <img src="{% static "posts/016.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example6" value="1"　checked>{{ choice1_6 }}
+        <input type="radio" name="example6" value="2" >{{ choice2_6}}<br><br>
+    </p>
+
+    <p>{{ question_7 }}<br>
+        <img src="{% static "posts/017.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example7" value="1"　checked>{{ choice1_7 }}
+        <input type="radio" name="example7" value="2" >{{ choice2_7}}<br><br>
+    </p>
+
+    <p>{{ question_8 }}<br>
+        <img src="{% static "posts/018.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example8" value="1"　checked>{{ choice1_8 }}
+        <input type="radio" name="example8" value="2" >{{ choice2_8}}<br><br>
+    </p>
+
+    <p>{{ question_9 }}<br>
+        <img src="{% static "posts/019.png"%}" style="max-height:500px"/><br>
+        <input type="radio" name="example9" value="1"　checked>{{ choice1_9 }}
+        <input type="radio" name="example9" value="2" >{{ choice2_9}}<br><br>
+    </p>
+    <input type="submit" value="送信"><br><br>
+
+</body>
+</form>
+</html>

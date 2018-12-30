@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta charset="UTF-8">
+    <title>質問３</title>
+</head>
+<form action="{% url 'polls100' %}" method="POST">　{% csrf_token %}
+
+    <body><br>
+    自身のファッションスタイルについて教えてください。<br>
+    {% load static%}
+    <p>１.{{ question_0 }}<br>
+        <input type="radio" name="example0" value="1"　checked>{{ choice1_0 }}
+        <input type="radio" name="example0" value="2" >{{ choice2_0 }}<br><br>
+    </p>
+
+    <p>２.{{ question_1 }}<br>
+        <input type="radio" name="example1" value="1"　checked>{{ choice1_1 }}
+        <input type="radio" name="example1" value="2" >{{ choice2_1}}<br><br>
+    </p>
+
+    <p>３.{{ question_2 }}<br>
+        <input type="radio" name="example2" value="1"　checked>{{ choice1_2 }}
+        <input type="radio" name="example2" value="2" >{{ choice2_2}}<br><br>
+    </p>
+
+    <p>４.{{ question_3 }}<br>
+        <input type="radio" name="example3" value="1"　checked>{{ choice1_3 }}
+        <input type="radio" name="example3" value="2" >{{ choice2_3}}<br><br>
+    </p>
+
+    <p>５.よく読む雑誌があれば教えてください。<br>
+        <input type="text" name="text" value="なし">
+    </p>
+
+    <input type="submit" value="送信"><br><br>
+
+</body>
+</form>
+</html>

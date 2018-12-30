@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form action="{% url 'polls0' %}" method="POST">　{% csrf_token %}
+<body>
+    {% load static%}
+    <p>年齢を教えてください。<br>
+        <input type="number" name="years" min="0" max="100"><br><br>
+    </p>
+    <input type="submit" value="送信"><br><br>
+</body>
+</form>
+</html>

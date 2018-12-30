@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta charset="UTF-8">
+    <title>質問２</title>
+</head>
+<form action="{% url 'polls30' %}" method="POST">　{% csrf_token %}
+
+    <body><br>
+    自分自身について、当てはまるものにチェックを入れてください。<br>
+    {% load static%}
+    <p>１.{{ question_0 }}<br>
+        <input type="radio" name="example0" value="1"　checked>{{ choice1_0 }}
+        <input type="radio" name="example0" value="2" >{{ choice2_0 }}<br><br>
+    </p>
+
+    <p>２.{{ question_1 }}<br>
+        <input type="radio" name="example1" value="1"　checked>{{ choice1_1 }}
+        <input type="radio" name="example1" value="2" >{{ choice2_1}}<br><br>
+    </p>
+
+    <input type="submit" value="送信"><br><br>
+
+</body>
+</form>
+</html>
